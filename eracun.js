@@ -248,6 +248,7 @@ streznik.post('/stranka', function(zahteva, odgovor) {
 // Odjava stranke
 streznik.post('/odjava', function(zahteva, odgovor) {
     expressSession.prijavaId = 0;
+    
     odgovor.redirect('/prijava');
 })
 
