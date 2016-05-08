@@ -136,6 +136,9 @@ var pesmiIzRacuna = function(racunId, callback) {
       if (napaka) {
         callback(false);
       } else {
+        for (var i=0; i<vrstice.length; i++) {
+          vrstice[i].stopnja = davcnaStopnja((vrstice[i].opisArtikla.split(' (')[1]).split(')')[0], vrstice[i].zanr);
+        }
         callback(vrstice);
       }
     })
